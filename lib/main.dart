@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'day_02_text_widgets_and_properties/app1_1_text_basics.dart';
+import 'day_02_text_widgets_and_properties/app2_1_text_basics.dart';
 
 void main() {
   runApp(const MyApp());
