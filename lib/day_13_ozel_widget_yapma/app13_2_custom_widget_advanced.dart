@@ -1,41 +1,28 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
-class CustomWidgetLearn extends StatelessWidget {
-  const CustomWidgetLearn({Key? key}) : super(key: key);
+class CustomWidgetAdvanced extends StatelessWidget {
   final String title = 'Food';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Center(
-              child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
+      body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+        Center(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
             child: SizedBox(
-                width: MediaQuery.of(context).size.width,
-                child: CustomFootButton(
-                  title: title,
-                  onPressed: () {},
-                )),
-          )),
-          const SizedBox(height: 100),
-          CustomFootButton(title: title, onPressed: () {}),
-        ],
-      ),
+              width: MediaQuery.of(context).size.width,
+              child: CustomFootButton(
+                title: title,
+                onPressed: () {},
+              ),
+            ),
+          ),
+        )
+      ]),
     );
   }
-}
-
-class _ColorsUtility {
-  final Color redColor = Colors.red;
-  final Color white = Colors.white;
-}
-
-class _PaddingUtility {
-  final EdgeInsets normalPadding = const EdgeInsets.all(8.0);
-  final EdgeInsets normal2xPadding = const EdgeInsets.all(16.0);
 }
 
 class CustomFootButton extends StatelessWidget
@@ -44,6 +31,7 @@ class CustomFootButton extends StatelessWidget
       : super(key: key);
   final String title;
   final void Function() onPressed;
+
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -61,4 +49,14 @@ class CustomFootButton extends StatelessWidget
           ),
         ));
   }
+}
+
+class _ColorsUtility {
+  final Color redColor = Colors.red;
+  final Color white = Colors.white;
+}
+
+class _PaddingUtility {
+  final EdgeInsets normalPadding = const EdgeInsets.all(8.0);
+  final EdgeInsets normal2xPadding = const EdgeInsets.all(16.0);
 }
