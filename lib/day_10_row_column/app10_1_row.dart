@@ -6,16 +6,24 @@ class RowYapisi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Text('Sol'),
-          Text('Orta'),
-          Text('Sağ'),
-        ],
-      ),
+      appBar: AppBar(),
+      body: Column(children: [
+        Container(
+          width: 100,
+          height: 200,
+          color: Colors.red,
+        ),
+        Container(
+          width: 100,
+          height: 200,
+          color: Colors.yellow,
+        ),
+        Container(
+          width: 100,
+          height: 200,
+          color: Colors.green,
+        )
+      ]),
     );
   }
 }
